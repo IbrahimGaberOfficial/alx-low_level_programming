@@ -18,7 +18,11 @@ void puts_half(char *str)
 	/* if the number is odd */
 	if (i % 2 != 0)
 	{
-		j = (j + 1) / 2;
+		j = (i + 1) / 2;
+	}
+	else
+	{
+		j = i / 2;
 	}
 	for (j; j < i; j++)
 	{
