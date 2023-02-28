@@ -15,7 +15,12 @@ void puts_half(char *str)
 	{
 		i++;
 	}
-	for (j = (i / 2); j < i; j++)
+	/* if the number is odd */
+	if (i % 2 != 0)
+	{
+		j = (j + 1) / 2;
+	}
+	for (j; j < i; j++)
 	{
 		_putchar(str[j]);
 	}
