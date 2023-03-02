@@ -15,9 +15,15 @@ void print_number(int n)
 	int rev_num = 0;
 	char _is_negative = '';
 
+	if (n == 0)
+	{
+		_putchar('0');
+		return;
+	}
 	if (n <= 0)
 	{
 		is_negative = '-';
+		n = n * -1;
 	}
 	while (n != 0)
 	{
@@ -28,7 +34,7 @@ void print_number(int n)
 	_putchar(is_negative);
 	while (rev_num != 0)
 	{
-		_putchar(rev_num % 10);
+		_putchar(rev_num % 10 + '0');
 		rev_num = rev_num / 10;
 	}
 
