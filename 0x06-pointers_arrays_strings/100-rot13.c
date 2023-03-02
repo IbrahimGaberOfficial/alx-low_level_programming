@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * leet - encode the string in leet method
+ * rot13 - encode the string in rot13 method
  *
  * @str: the target string
  *
  * Return: str
  */
 
-char *leet(char *str)
+char *rot13(char *str)
 {
 	int i = 0;
 
