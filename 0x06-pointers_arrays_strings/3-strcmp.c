@@ -26,11 +26,7 @@ int _strcmp(char *s1, char *s2)
 	}
 	else if (s1[i] > s2[i])
 	{
-		_compare = 15;
-	}
-	else
-	{
-		_compare = -15;
+		_compare = s1[i] - s2[i];
 	}
 	return (_compare);
 }
