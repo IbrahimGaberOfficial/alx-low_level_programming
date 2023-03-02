@@ -13,7 +13,7 @@ void print_number(int n)
 {
 	int reminder = 0;
 	int rev_num = 0;
-	char is_negative = '';
+	char is_negative = '\0';
 
 	if (n == 0)
 	{
