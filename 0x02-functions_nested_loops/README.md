@@ -1,1 +1,1 @@
-# This is Dir to practice functions and nested loops in C language
+#This is Dir to practice functions and nested loops in C language
