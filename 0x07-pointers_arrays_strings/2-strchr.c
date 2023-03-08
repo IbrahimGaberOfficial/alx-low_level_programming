@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stddef.h>
 /**
  * _strchr - search in s to find c
  *
@@ -13,7 +13,7 @@ char *_strchr(char *s, char c)
 {
 	int i = 1;
 
-	while (str[i] != '\0')
+	while (s[i] != '\0')
 	{
 		if (s[i - 1] == c)
 		{
