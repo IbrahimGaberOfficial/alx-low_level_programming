@@ -22,15 +22,17 @@ char *_strpbrk(char *s, char *accept)
 
 			if (s[i] == accept[j])
 			{
-				i = -1;
+				j = -1;
 				break;
 
 			}
 			j++;
 		}
-		if (i == -1)
-			break;
+		if (j == -1)
+		{
+			return (&s[i]);
+		}
 		i++;
 	}
-return (&s[j - 1]);
+	return ('\0');
 }
