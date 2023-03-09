@@ -3,12 +3,12 @@
  * _strlen_recursion - function to find the lenght of string using recursion
  *
  * @s: the string
- * 
- * Return: the lengh of the string s 
+ *
+ * Return: the lengh of the string s
  */
 int _strlen_recursion(char *s)
 {
-	if(s[0] == '\0')
+	if (s[0] == '\0')
 	{
 		return (0);
 	}
