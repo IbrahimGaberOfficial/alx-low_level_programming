@@ -11,13 +11,9 @@
  */
 int main(int argc, char *argv[])
 {
-	int i = 0;
-
-	(void) argc;
-	while (*argv[i] != '\0')
+	while (argc--)
 	{
-		printf("%s\n", argv[i]);
-		i++;
+		printf("%s\n", *argv++);
 	}
 	return (0);
 }
