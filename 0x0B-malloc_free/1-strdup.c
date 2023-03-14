@@ -16,7 +16,7 @@ char *_strdup(char *str)
 	int i = 0, j = 0;
 	char *ptr;
 
-	if (str == NULL )
+	if (str == NULL)
 	{
 		return (NULL);
 	}
@@ -39,7 +39,7 @@ char *_strdup(char *str)
 		j++;
 	}
 
-	ptr[j] = '\0';
+	/* ptr[j] = '\0'; */
 
 	return (ptr);
 
