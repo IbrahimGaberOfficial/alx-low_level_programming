@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <limits.h>
 
 /**
  * _calloc - function allocate memory of nmem number of elemets
@@ -18,7 +19,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-
+	if (nmemb >= INT_MAX / size || size >= INT_MAX / nmemb)
+		return (NULL);
+	
 	ptr = malloc(nmemb * size);
 
 	if (ptr == NULL)
