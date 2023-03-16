@@ -21,7 +21,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	if (nmemb >= INT_MAX / size || size >= INT_MAX / nmemb)
 		return (NULL);
-	
+
 	ptr = malloc(nmemb * size);
 
 	if (ptr == NULL)
