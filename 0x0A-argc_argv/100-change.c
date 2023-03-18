@@ -10,7 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-	int i, j, change, value;
+	int change, value;
 
 	if (argc > 2)
 	{
