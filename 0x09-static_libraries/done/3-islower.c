@@ -4,8 +4,15 @@
 #include <ctype.h>
 #include <string.h>
 
-int _putchar(char c)
-{
-    return putchar(c);
-}
+/**
+ * _islower - function check if c is lower or not
+ *
+ * @c: character to be checkked
+ *
+ * Return: trur if c is lower false otherwise
+ */
 
+int _islower(int c)
+{
+	return (c >= 'a' && c <= 'z');
+}

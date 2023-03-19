@@ -4,8 +4,16 @@
 #include <ctype.h>
 #include <string.h>
 
+/**
+ * _abs - return the absolute value of n
+ *
+ * @n: intger
+ *
+ * Return: the absolute value of n
+ */
+
 int _abs(int n)
 {
-    return abs(n);
+	return (abs(n));
 }
 
