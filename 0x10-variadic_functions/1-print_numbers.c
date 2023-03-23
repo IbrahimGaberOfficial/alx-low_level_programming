@@ -1,4 +1,4 @@
-
+#include "variadic_functions.h"
 /**
  * print_numbers - function print arguments passed to function sprated
  * seprated by charcter "separator"
