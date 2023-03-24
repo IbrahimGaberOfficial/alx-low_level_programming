@@ -10,41 +10,44 @@
 
 void print_all(const char * const format, ...)
 {
-	int i = 0, len = 0;
-	char character;
+	int i = 0, len = 0, turn = 0;
+	char *check_string;
 	va_list args;
 
-	len = strlen(format);
+	while (format[len++] != '\0')
+
+	len--;
 	va_start(args, format);
+
 	while (format[i] != '\0')
 	{
-		character = format[i];
-		if (character != 'c' && character != 'i' && character != 'f'
-				&& character != 's')
+		turn = 1;
+		switch (format[i++])
 		{
-			i++;
-			continue;
+			case 'c':
+				printf("%c", va_arg(args, int));
+				break;
+			case 'i':
+				printf("%d", va_arg(args, int));
+				break;
+			case 'f':
+				printf("%f", va_arg(args, double));
+				break;
+			case 's':
+				check_string = va_arg(args, char *);
+				if (check_string)
+				{
+					printf("%s", check_string);
+					break;
+				}
+				printf("(nail)");
+				break;
+			default:
+				turn = 0;
+				break;
 		}
-		else if (character == 'c')
-		{
-			printf("%c", va_arg(args, int));
-		}
-		else if (character == 'i')
-		{
-			printf("%i", va_arg(args, int));
-		}
-		else if (character == 'f')
-		{
-			printf("%f", va_arg(args, double));
-		}
-		else if (character == 's')
-		{
-			printf("%s", va_arg(args, char *));
-		}
-		if (i < (len - 1))
+		if (turn && i < len)
 			printf(", ");
-		i++;
 	}
 	printf("\n");
-	va_end(args);
 }
