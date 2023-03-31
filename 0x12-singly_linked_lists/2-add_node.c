@@ -2,7 +2,7 @@
 
 /**
  * _strlen - function claculate the length of passed string
- * 
+ *
  * @str: passed string
  *
  * Return: lenghth of string (unsigned int);
@@ -11,7 +11,7 @@
 unsigned int _strlen(const char *str)
 {
 	unsigned int i = 0;
-	
+
 	while (str[i] != '\0')
 		i++;
 	return (i);
