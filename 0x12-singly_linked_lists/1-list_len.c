@@ -10,6 +10,7 @@
 
 size_t list_len(const list_t *h)
 {
+	/*
 	unsigned int j = 0;
 	const list_t *tmp = h;
 
@@ -17,5 +18,16 @@ size_t list_len(const list_t *h)
 	{
 		j++;
 	}
+	return (j);
+	*/
+	int j = 0;
+	const list_t *temp_ptr = h;
+	
+	while (temp_ptr !=  NULL)
+	{
+		j++;
+		temp_ptr = temp_ptr->next;
+	}
+	
 	return (j);
 }
