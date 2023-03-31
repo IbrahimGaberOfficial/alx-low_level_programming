@@ -20,7 +20,7 @@ size_t list_len(const list_t *h)
 	}
 	return (j);
 	*/
-	int j = 0;
+	unsigned int j = 0;
 	const list_t *temp_ptr = h;
 	
 	while (temp_ptr !=  NULL)
